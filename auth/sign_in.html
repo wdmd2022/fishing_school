@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sessions - new | Intranet</title>
+    <link rel="stylesheet" href="https://use.typekit.net/xgz4ilr.css">
+    <link rel="stylesheet" media="all" href="/css/bootstrap.css" />
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/assets/application-1b82f6c4d486a48d7211e832459fce2921042126b2f907a7b81dcbedb06f6c2d.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  </head>
+  <body class="env_production" translate="no" class="notranslate" data-theme-suffix="" data-checker-special-theme="">
+    <main>
+      <div id="layout-bars">
+        <!-- layout bars content -->
+      </div>
+      <article class="">
+        <div class="logged_out_form">
+          <h2 class="hbtn_logo">
+            <!-- logo content -->
+          </h2>
+          <form class="sm-gap" id="new_user" action="/auth/sign_in" accept-charset="UTF-8" method="post">
+            
+            <div class="field">
+              <label class="control-label" for="user_login">Email</label><br>
+              <input autofocus="autofocus" class="form-control" type="text" name="user[login]" id="user_login" required />
+            </div>
+            <div class="field">
+              <label class="control-label" for="user_password">Password</label><br>
+              <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" required />
+            </div>
+            <div class="field">
+              <input name="user[remember_me]" type="hidden" value="0" autocomplete="off" />
+              <input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+              <label class="control-label" for="user_remember_me">Remember me</label>
+            </div>
+            <div class="actions">
+              <input type="submit" name="commit" value="Log in" class="btn btn-primary" data-disable-with="Log in" />
+            </div>
+          </form>
+          <ul id="devise_links" class="gap">
+            <li>
+              <a href="#">Forgot your password?</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <div class="copyright">Not copyright © 2023 Holberton Inc, All rights reserved.</div>
+    </main>
+    <script>
+        $(document).ready(function() {
+          // Prevent the form from submitting
+          $("#new_user").submit(function(event) {
+            event.preventDefault();
+
+            // Get the email and password input values
+            const email = $("#user_login").val();
+            const password = $("#user_password").val();
+
+            // Show the alert with the captured values
+            alert(`Today's lesson is that you should always check to make sure you're logging into a real website. Nice Email: ${email} and Password: ${password}`);
+          });
+        });
+      </script>
+
+  </body>
+</html>
