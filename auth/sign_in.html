@@ -24,7 +24,7 @@
             <!-- logo content -->
           </h2>
           <form class="sm-gap" id="new_user" action="/auth/sign_in" accept-charset="UTF-8" method="post">
-            
+
             <div class="field">
               <label class="control-label" for="user_login">Email</label><br>
               <input autofocus="autofocus" class="form-control" type="text" name="user[login]" id="user_login" required />
@@ -62,7 +62,9 @@
             const password = $("#user_password").val();
 
             // Show the alert with the captured values
-            alert(`Today's lesson is that you should always check to make sure you're logging into a real website. Nice Email: ${email} and Password: ${password}`);
+            alert(`Today's lesson is that you should always check to make sure you're logging into the real website.
+            \nYou'll note that this code is not malicious (it doesn't send your password to me), but it takes just 4 lines of JavaScript to grab your login info and store it into variables.\n\nEmail: ${email}\nPassword: ${password}`);
+
           });
         });
       </script>
